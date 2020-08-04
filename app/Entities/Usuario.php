@@ -6,11 +6,13 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\UsuarioRepository")
  */
 /**
+ * @ORM\Entity
+ * @ORM\Table(name="Cliente")
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="discr", type="string")
  * @ORM\DiscriminatorMap({"usuario" = "Usuario", "cliente" = "Cliente"})
  */
-class Usuario
+ abstract class Usuario
 {
     /**
      * @ORM\Id
