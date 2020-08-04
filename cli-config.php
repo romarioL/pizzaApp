@@ -15,7 +15,7 @@ $params = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'root',
     'password' => '',
-    'dbname'   => 'teste',
+    'dbname'   => 'pizzaApp',
     'host'     => '127.0.0.1'
 );
 

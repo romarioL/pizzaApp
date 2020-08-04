@@ -11,7 +11,7 @@ $params = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'root',
     'password' => '',
-    'dbname'   => 'test',
+    'dbname'   => 'teste',
 );
 
 $connection = new Connection();
