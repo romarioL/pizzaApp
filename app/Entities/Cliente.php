@@ -25,6 +25,12 @@ class Cliente extends Usuario
      */
     private $cpf;
 
+     
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $numeroCartao;
+
 
     public function getId()
     {
@@ -39,6 +45,17 @@ class Cliente extends Usuario
     public function getCpf()
     {
         return $this->cpf;
+    }
+
+
+    public function setNumeroCartao($numeroCartao)
+    {
+        $this->numeroCartao = $numeroCartao;
+    }
+
+    public function getNumeroCartao()
+    {
+        return $this->numeroCartao;
     }
 
 }
