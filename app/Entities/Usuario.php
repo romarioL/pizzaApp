@@ -25,7 +25,7 @@ class Usuario
     private $nome;
 
     /**
-     * @ORM\Column(type="integer", length=1)
+     * @ORM\Column(type="boolean", length=1)
      */
     private $admin;
 
