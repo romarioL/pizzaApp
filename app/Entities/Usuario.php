@@ -9,8 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="Cliente")
  * @ORM\InheritanceType("SINGLE_TABLE")
- * @ORM\DiscriminatorColumn(name="discr", type="string")
- * @ORM\DiscriminatorMap({"usuario" = "Usuario", "cliente" = "Cliente"})
+ * @ORM\DiscriminatorColumn(name="type_user", type="string")
+ * @ORM\DiscriminatorMap({"usuario" = "Usuario", "cliente" = "Cliente", "admin" = "Admin"})
  */
  abstract class Usuario
 {
@@ -26,10 +26,6 @@ use Doctrine\ORM\Mapping as ORM;
      */
     private $nome;
 
-    /**
-     * @ORM\Column(type="boolean", length=1)
-     */
-    private $admin;
 
     /**
      * @ORM\Column(type="string", length=255)
