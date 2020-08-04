@@ -1,0 +1,19 @@
+{
+    "name": "romis/pizza-app",
+    "description": "Um sistema de delivery de pizza",
+    "authors": [
+        {
+            "name": "Romis Sousa",
+            "email": "estreladamanha585@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.7"
+    },
+    "autoload" : {
+        "psr-4": {
+            "App\\": "app/",
+            "Src\\" : "src/"
+        }
+    }
+}
