@@ -30,6 +30,18 @@ use Doctrine\ORM\Mapping as ORM;
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $email;
+
+
+      /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $cpf;
+
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $senha;
 
 
@@ -48,14 +60,24 @@ use Doctrine\ORM\Mapping as ORM;
         return $this->nome;
     }
 
-    public function setAdmin($admin) 
+    public function setEmail($email) 
     {
-        $this->admin = $admin;
+        $this->email = $email;
     }
 
-    public function getAdmin() 
+    public function getEmail() 
     {
-        return $this->admin;
+        return $this->email;
+    }
+
+    public function setCpf($cpf)
+    {
+        $this->cpf = $cpf;
+    }
+
+    public function getCpf()
+    {
+        return $this->cpf;
     }
 
     public function setSenha($senha) 

@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Entities;
+
 use Doctrine\ORM\Mapping as ORM;
 use App\Entities\Usuario;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ClienteRepository")
  */
@@ -20,11 +22,6 @@ class Cliente extends Usuario
     private $id;
 
     
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $cpf;
-
      
     /**
      * @ORM\Column(type="string", length=255)
@@ -37,17 +34,6 @@ class Cliente extends Usuario
         return $this->id;
     }
    
-    public function setCpf($cpf)
-    {
-        $this->cpf = $cpf;
-    }
-
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-
-
     public function setNumeroCartao($numeroCartao)
     {
         $this->numeroCartao = $numeroCartao;
@@ -57,5 +43,4 @@ class Cliente extends Usuario
     {
         return $this->numeroCartao;
     }
-
 }
