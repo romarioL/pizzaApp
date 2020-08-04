@@ -11,7 +11,9 @@ use App\Entities\Usuario;
  * @ORM\Entity
  */
 class Admin extends Usuario
-{   /**
+{   
+    
+    /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
