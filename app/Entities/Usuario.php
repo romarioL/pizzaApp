@@ -5,6 +5,11 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UsuarioRepository")
  */
+/**
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="discr", type="string")
+ * @ORM\DiscriminatorMap({"usuario" = "Usuario", "cliente" = "Cliente"})
+ */
 class Usuario
 {
     /**
@@ -28,6 +33,7 @@ class Usuario
      * @ORM\Column(type="string", length=255)
      */
     private $senha;
+
 
     public function getId()
     {
