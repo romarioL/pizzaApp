@@ -8,8 +8,7 @@
         }
     ],
     "require": {
-        "doctrine/orm": "^2.7",
-        "erandir/plug-route": "^3.9"
+        "doctrine/orm": "^2.7"
     },
     "autoload" : {
         "psr-4": {
