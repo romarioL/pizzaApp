@@ -17,7 +17,8 @@ class Routes
         $i = $url[0];
 
         $this->rota = array(
-         "" => "HomeController"
+         "" => "HomeController",
+         "home" => "HomeController"
       );
 
         if (array_key_exists($i, $this->rota)) {
