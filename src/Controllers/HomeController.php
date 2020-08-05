@@ -1,15 +1,16 @@
 <?php
 
 namespace Src\Controllers;
+use Src\Render;
 
-class HomeController
+class HomeController extends Render
 {
     public function index()
     {
-        echo "oi";
-    }
-
-    public function cu($cu){
-        echo $cu;
+        $this->setTitle("Página inicial");
+        $this->setDescription("Essa  é a página inicial");
+        $this->setKeywords("mvc completo, curso mvc");
+        $this->setDir("home");
+        $this->renderLayout();
     }
 }
