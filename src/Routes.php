@@ -28,7 +28,7 @@ class Routes
                 return "HomeController";
             }
         } else {
-            return "Controller404";
+            return "NotFoundController";
         }
     }
 }
