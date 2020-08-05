@@ -12,15 +12,10 @@
  <body>
     <div class="nav">
         <a href="<?php  echo __DIR__; ?>">Home</a>
-        <a href="<?php echo__DIR__ . 'contato' ?>">Contato</a>
-        <a href="<?php echo__DIR__ . 'cadastro' ?>">Cadastro</a>
-        <a href="<?php echo__DIR__ . 'login' ?>">Login</a>
     </div>
      <div class="header">
         <?php 
         echo "<a href='".__DIR__ . "'>Home</a>>";
-        $n = new Src\classes\classBreadcrumb();
-        $n->addBreadCrumb();
         ?>
         <br>
         <hr>
