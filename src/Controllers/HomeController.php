@@ -8,4 +8,8 @@ class HomeController
     {
         echo "oi";
     }
+
+    public function cu($cu){
+        echo $cu;
+    }
 }

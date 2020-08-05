@@ -47,13 +47,14 @@ class Seeder extends Routes
         $nameS = "Src\\Controllers\\${rotaController}";
 
         $this->obj = new $nameS;
-
-        if (method_exists($this->obj, 'index')) {
-            call_user_func_array([$this->obj, "index"], $this->getParam());
+        if (count($this->parserURL()) == 1 ||count($this->parserURL()) == 2) {
+            if (method_exists($this->obj, 'index')) {
+                call_user_func_array([$this->obj, "index"], $this->getParam());
+            }
         }
        
 
-        if (isset($this->parserURL()[1])) {  
+        if (isset($this->parserURL()[1])) {
             self::addMethod();
         }
     }
