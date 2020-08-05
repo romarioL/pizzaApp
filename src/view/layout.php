@@ -18,10 +18,6 @@ require_once __DIR__ . '/../../app/Config/Config.php';
         <a href="<?php  echo DIRPAGE; ?>">Home</a>
     </div>
      <div class="header">
-        <?php 
-        echo "<a href='". DIRPAGE . "'>Home</a>>";
-        ?>
-        <br>
         <hr>
 
      	<?php echo $this->addHeader(); ?>
