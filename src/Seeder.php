@@ -1,6 +1,7 @@
 <?php
 
 namespace Src;
+
 use Src\Routes;
 
 class Seeder extends Routes
@@ -47,7 +48,12 @@ class Seeder extends Routes
 
         $this->obj = new $nameS;
 
-        if (isset($this->parserURL()[1])) {
+        if (method_exists($this->obj, 'index')) {
+            call_user_func_array([$this->obj, "index"], $this->getParam());
+        }
+       
+
+        if (isset($this->parserURL()[1])) {  
             self::addMethod();
         }
     }
@@ -55,7 +61,7 @@ class Seeder extends Routes
     private function addMethod()
     {
         if (method_exists($this->obj, $this->parserURL()[1])) {
-            $this->setMethod("{$this->parserURL()[1]}");
+            $this->setMethod(count($this->parserURL()) > 1 ? "{$this->parserURL()[1]}" : "index");
             self::addParam();
             call_user_func_array([$this->obj, $this->getMethod()], $this->getParam());
         }
