@@ -1,3 +1,7 @@
+<?php 
+
+require_once __DIR__ . '/../../app/Config/Config.php';
+?>
 <!DOCTYPE html>
  <html lang="pt-br">
  <head>
@@ -11,11 +15,11 @@
  </head>
  <body>
     <div class="nav">
-        <a href="<?php  echo __DIR__; ?>">Home</a>
+        <a href="<?php  echo DIRPAGE; ?>">Home</a>
     </div>
      <div class="header">
         <?php 
-        echo "<a href='".__DIR__ . "'>Home</a>>";
+        echo "<a href='". DIRPAGE . "'>Home</a>>";
         ?>
         <br>
         <hr>
