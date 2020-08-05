@@ -1,11 +1,16 @@
 <?php
 
 require_once __DIR__ . "/../vendor/autoload.php";
-
+require_once __DIR__ . "/../src/Seeder.php";
 use App\Config\Connection;
 use App\Entities\Produto;
+use Src\Seeder;
 
-$paths = [__DIR__."/../app/Entities"];
+$dispatch = new Seeder();
+
+
+
+/* $paths = [__DIR__."/../app/Entities"];
 $isDevMode = true;
 $params = array(
     'driver'   => 'pdo_mysql',
@@ -31,3 +36,4 @@ $productCount = $con->getRepository(Produto::class)
                          ->count(['nome' => 'Bicicleta']);
 
 echo $productCount;
+*/
